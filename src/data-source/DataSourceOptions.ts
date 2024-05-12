@@ -16,6 +16,8 @@ import { AuroraPostgresConnectionOptions } from "../driver/aurora-postgres/Auror
 import { BetterSqlite3ConnectionOptions } from "../driver/better-sqlite3/BetterSqlite3ConnectionOptions"
 import { CapacitorConnectionOptions } from "../driver/capacitor/CapacitorConnectionOptions"
 import { SpannerConnectionOptions } from "../driver/spanner/SpannerConnectionOptions"
+import { LibSqlConnectionOptions } from "../driver/libsql/LibSqlConnectionOptions"
+import { SqlitePooledConnectionOptions } from "../driver/sqlite-pooled/SqlitePooledConnectionOptions"
 
 /**
  * DataSourceOptions is an interface with settings and options for specific DataSource.
@@ -25,6 +27,7 @@ export type DataSourceOptions =
     | PostgresConnectionOptions
     | CockroachConnectionOptions
     | SqliteConnectionOptions
+    | SqlitePooledConnectionOptions
     | SqlServerConnectionOptions
     | SapConnectionOptions
     | OracleConnectionOptions
@@ -39,3 +42,4 @@ export type DataSourceOptions =
     | BetterSqlite3ConnectionOptions
     | CapacitorConnectionOptions
     | SpannerConnectionOptions
+    | LibSqlConnectionOptions

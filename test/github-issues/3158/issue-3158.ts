@@ -22,7 +22,9 @@ describe("github issues > #3158 Cannot run sync a second time", async () => {
                     "mssql",
                     "sqljs",
                     "sqlite",
+                    "sqlite-pooled",
                     "better-sqlite3",
+                    "libsql",
                 ],
                 // todo(AlexMesser): check why tests are failing under postgres driver
             })),

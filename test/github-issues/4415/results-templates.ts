@@ -157,4 +157,10 @@ export const resultsTemplates: Record<string, any> = {
     get "better-sqlite3"() {
         return this.sqlite
     },
+    get libsql() {
+        return this.sqlite
+    },
+    get "sqlite-pooled"() {
+        return this.sqlite
+    },
 }

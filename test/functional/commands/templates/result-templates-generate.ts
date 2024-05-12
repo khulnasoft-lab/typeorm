@@ -5,13 +5,15 @@ import { oracle } from "./generate/oracle"
 import { cockroachdb } from "./generate/cockroachdb"
 import { mssql } from "./generate/mssql.js"
 
-export const resultsTemplates: Record<string, any> = {
+export const resultsTemplates: Record<string, Record<string, string>> = {
     mysql,
     mariadb: mysql,
     mssql,
     sqlite,
+    "sqlite-pooled": sqlite,
     "better-sqlite3": sqlite,
     postgres,
     oracle,
     cockroachdb,
+    libsql: sqlite,
 }

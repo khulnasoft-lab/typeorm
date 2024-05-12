@@ -34,6 +34,8 @@ describe("commands - migration create", () => {
         "oracle",
         "postgres",
         "sqlite",
+        "sqlite-pooled",
+        "libsql",
     ]
 
     // simulate args: `npm run typeorm migration:run -- -n test-migration -d test-directory`

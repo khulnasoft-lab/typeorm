@@ -15,9 +15,11 @@ describe("query runner > drop unique constraint", () => {
                 "mssql",
                 "postgres",
                 "sqlite",
+                "sqlite-pooled",
                 "better-sqlite3",
                 "oracle",
                 "cockroachdb",
+                "libsql",
             ], // mysql and sap does not supports unique constraints
             schemaCreate: true,
             dropSchema: true,

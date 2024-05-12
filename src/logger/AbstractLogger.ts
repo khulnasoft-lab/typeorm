@@ -7,7 +7,6 @@ import {
 } from "./Logger"
 import { QueryRunner } from "../query-runner/QueryRunner"
 import { LoggerOptions } from "./LoggerOptions"
-import { PlatformTools } from "../platform/PlatformTools"
 
 export abstract class AbstractLogger implements Logger {
     // -------------------------------------------------------------------------
@@ -295,11 +294,8 @@ export abstract class AbstractLogger implements Logger {
         options?: Partial<PrepareLogMessagesOptions>,
     ): LogMessage[] {
         options = {
-            ...{
-                addColonToPrefix: true,
-                appendParameterAsComment: true,
-                highlightSql: true,
-            },
+            addColonToPrefix: true,
+            appendParameterAsComment: false,
             ...options,
         }
         const messages = Array.isArray(logMessage) ? logMessage : [logMessage]
@@ -322,10 +318,6 @@ export abstract class AbstractLogger implements Logger {
                     sql += ` -- PARAMETERS: ${this.stringifyParams(
                         message.parameters,
                     )}`
-                }
-
-                if (options.highlightSql) {
-                    sql = PlatformTools.highlightSql(sql)
                 }
 
                 message.message = sql

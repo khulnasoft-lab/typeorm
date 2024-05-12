@@ -18,9 +18,11 @@ describe("github issues > #134 Error TIME is converted to 'HH-mm' instead of 'HH
                     "mysql",
                     "mariadb",
                     "sqlite",
+                    "sqlite-pooled",
                     "better-sqlite3",
                     "mssql",
                     "postgres",
+                    "libsql",
                 ], // Oracle does not support TIME data type.
             })),
     )

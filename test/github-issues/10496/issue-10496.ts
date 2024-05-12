@@ -30,6 +30,8 @@ describe("github issues > #10496 User-defined index name for Single Table Inheri
                     "postgres",
                     "spanner",
                     "sqlite",
+                    "sqlite-pooled",
+                    "libsql",
                 ],
             })),
     )

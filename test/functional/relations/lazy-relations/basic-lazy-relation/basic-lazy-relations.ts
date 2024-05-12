@@ -382,8 +382,10 @@ describe("basic-lazy-relations", () => {
                     new Set([
                         "mysql",
                         "sqlite",
+                        "sqlite-pooled",
                         "better-sqlite3",
                         "postgres",
+                        "libsql",
                     ]).has(connection.options.type),
                 )
                 .map(async (connection) => {
@@ -416,8 +418,10 @@ describe("basic-lazy-relations", () => {
                     new Set([
                         "mysql",
                         "sqlite",
+                        "sqlite-pooled",
                         "better-sqlite3",
                         "postgres",
+                        "libsql",
                     ]).has(connection.options.type),
                 )
                 .map(async (connection) => {
